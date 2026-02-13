@@ -1,0 +1,82 @@
+{
+  "campers": [
+    {
+      "id": "0042020757",
+      "nombres": "Julian",
+      "apellidos": "Pinto",
+      "direccion": "Calle 22#15",
+      "acudiente": "Milena Uribe",
+      "telefono_celular": "3105334206",
+      "telefono_fijo": "607123456",
+      "estado": "Inscrito",
+      "riesgo": "Bajo",
+      "notaPruebaPractica": "notaPruebaPractica",
+      "notaPruebaTeorica": "notaPruebaTeorica"
+    }
+  ],
+
+  "rutas": [
+    {
+      "nombre": "Ruta NodeJS",
+      "sgbd_principal": "MongoDB",
+      "sgbd_alternativo": "MySQL",
+      "modulos": [
+        "Fundamentos de programación",
+        "Programación Web",
+        "Backend"
+      ]
+    }
+  ],
+
+  "trainers": [
+    {
+      "id": "P",
+      "nombre": "Pedro Gómez",
+      "horario" : "6:00 AM - 6:00 PM",
+      "especialidad": ["NodeJS", "Java"]
+    },
+    { 
+      "id": "C",
+      "nombre": "Cristian Díaz",
+      "horario" : "10:00 AM - 6:00 PM",
+      "especialidad": ["NodeJS", "Java"]
+    },
+    { 
+      "id": "E",
+      "nombre": "Edwin Salas",
+      "horario" : "6:00 AM - 2:00 PM",
+      "especialidad": ["NetCore", "Java"]
+    },
+    { 
+      "id": "J",
+      "nombre": "Johlbert ",
+      "horario" : "10:00 AM - 6:00 PM",
+      "especialidad": ["NodeJS", "Java"]
+    }
+   ],
+
+    "coordinador/a" : [
+    {
+      "nombre": "Karen",
+      "horario" : "8:00 AM - 6:00 PM"
+    }
+  ],
+
+   "salones" : [
+    {
+      "nombre": "Sputnik",
+      "capacidad" : "35 campers",
+      "horario" : "Lunes-Viernes"
+    },
+    {
+      "nombre": "Artemis",
+      "capacidad" : "35 campers",
+      "horario" : "Lunes-Viernes"
+    },
+    {
+      "nombre": "Apolo",
+      "capacidad" : "35 campers",
+      "horario" : "Lunes-Viernes"
+    }
+   ]
+}
