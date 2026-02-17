@@ -73,7 +73,7 @@ def iniciarSesionCamper():
         if i["id"] == id_camper:
             camper_encontrado = i
             break
-
+        
     # Si el camper fue encontrado
     if camper_encontrado:
         # Variable booleana para controlar el menú del camper
@@ -107,9 +107,28 @@ def iniciarSesionCamper():
             # =========================
             elif opcionCam == 2:
                 ruta_camper = camper_encontrado.get("ruta")
-                for trainer in datos["trainers"]:
-                    print("Trainer disponible: ", trainer["nombre"])
-                print("Ruta asignada: ", camper_encontrado.get("ruta", "No asignada"))
+
+                if not ruta_camper:
+                    print("El camper no tiene ruta asignada")
+                else:
+                    trainer_encontrado = False
+
+                    for trainer in datos["trainers"]:
+                        especialidades = trainer.get("especialidad", [])
+
+                        if ruta_camper in especialidades:
+                            print("Trainer asignado:", trainer["nombre"])
+                            print("Horario:", trainer["horario"])
+                            trainer_encontrado = True
+                            break
+
+                    if not trainer_encontrado:
+                        print("No hay trainers para la ruta:", ruta_camper)
+
+                    print("Ruta asignada:", ruta_camper)
+
+
+
                 
 
             # =========================
@@ -133,8 +152,10 @@ def iniciarSesionCamper():
             # OPCIÓN INVÁLIDA
             # =========================
             else:
+                print("------------------------------")
                 print("⚠️ Opción inválida ⚠️")
 
     # Si el ID del camper no existe
     else:
+        print("------------------------------")
         print("⚠️ ID de Camper no válido ⚠️")
